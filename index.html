@@ -1,0 +1,256 @@
+from pathlib import Path
+
+html = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for PDF Experts, a PDF utility app for locking and unlocking PDFs, editing text, and resizing documents.">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy | PDF Experts</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --red: #e53935;
+      --red-dark: #c62828;
+      --ink: #191919;
+      --muted: #626262;
+      --line: #eeeeee;
+      --soft-red: #fff4f4;
+      --page: #ffffff;
+      --surface: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--red-dark); text-underline-offset: 3px; }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.96);
+    }
+    .topbar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--red);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .brand-name { font-size: 18px; font-weight: 800; letter-spacing: -.4px; }
+    .brand-subtitle { color: var(--muted); font-size: 12px; margin-top: -2px; }
+    main { max-width: 850px; margin: 0 auto; padding: 54px 24px 76px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.12;
+      letter-spacing: -1.8px;
+      font-weight: 850;
+    }
+    .intro { max-width: 680px; color: var(--muted); font-size: 17px; }
+    .updated { color: var(--muted); font-size: 13px; margin-top: 20px; }
+    .privacy-card {
+      margin: 30px 0 42px;
+      padding: 24px;
+      border: 1px solid #f4dada;
+      border-radius: 20px;
+      background: var(--soft-red);
+    }
+    .privacy-card h2 { margin: 0 0 8px; font-size: 19px; }
+    .privacy-card p { margin: 0; }
+    .toc {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin: 0 0 42px;
+    }
+    .toc h2 { margin: 0 0 12px; font-size: 17px; }
+    .toc ol { margin: 0; padding-left: 21px; columns: 2; column-gap: 32px; }
+    .toc li { margin: 4px 0; break-inside: avoid; font-size: 14px; }
+    section { padding: 0 0 25px; margin: 0 0 27px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+    section:last-of-type { border-bottom: 0; }
+    h2.section-title { font-size: 22px; line-height: 1.35; margin: 0 0 12px; letter-spacing: -.4px; font-weight: 800; }
+    h3 { font-size: 16px; margin: 18px 0 7px; font-weight: 800; }
+    p { margin: 0 0 12px; }
+    ul { padding-left: 22px; margin: 8px 0 14px; }
+    li { padding-left: 3px; margin: 5px 0; }
+    strong { font-weight: 800; }
+    .contact {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      background: var(--surface);
+    }
+    .contact p:last-child { margin-bottom: 0; }
+    .placeholder { color: var(--red-dark); font-weight: 800; }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 24px;
+    }
+    @media (max-width: 600px) {
+      main { padding: 36px 18px 54px; }
+      .topbar-inner { padding: 14px 18px; }
+      .toc ol { columns: 1; }
+      .privacy-card { padding: 20px; }
+      .intro { font-size: 16px; }
+      h2.section-title { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-mark" aria-hidden="true">P</div>
+      <div>
+        <div class="brand-name">PDF Experts</div>
+        <div class="brand-subtitle">Your PDFs. Made Simple.</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <span class="eyebrow">Legal &amp; Privacy</span>
+    <h1>Privacy Policy</h1>
+    <p class="intro">
+      This Privacy Policy explains how PDF Experts handles information when you use the app to lock or unlock PDFs, edit PDF text, or resize PDF documents.
+    </p>
+    <p class="updated"><strong>Effective date:</strong> October 9, 2026 &nbsp;·&nbsp; <strong>Last updated:</strong> October 9, 2026</p>
+
+    <div class="privacy-card">
+      <h2>Privacy is important to us.</h2>
+      <p>PDF Experts is designed to let you work with documents without creating an account. <strong>Statements about local processing and data collection below apply only to features and versions that actually operate that way.</strong> Please verify the app's SDKs, permissions, and network behavior before publishing this policy.</p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#account">Account and personal information</a></li>
+        <li><a href="#files">PDF files and passwords</a></li>
+        <li><a href="#storage">Local storage and cache</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#sharing">Sharing and third parties</a></li>
+        <li><a href="#ads-analytics">Ads, analytics and diagnostics</a></li>
+        <li><a href="#security">Security and retention</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#rights">Your choices and rights</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="account">
+      <h2 class="section-title">1. Account and personal information</h2>
+      <p>PDF Experts does not require an account or sign-up to use its core PDF tools. You are not asked to provide a name, phone number, email address, or profile details to use those features.</p>
+      <p>If you contact the developer for support, the information you choose to include in your message, such as your email address, may be used to respond to your request.</p>
+    </section>
+
+    <section id="files">
+      <h2 class="section-title">2. PDF files and passwords</h2>
+      <p>PDF Experts provides tools for <strong>locking and unlocking PDFs, editing PDF text, and resizing PDF documents</strong>.</p>
+      <p>Where the relevant feature processes files entirely on your device, the PDF content and passwords you enter are used locally to complete your requested operation and are not sent to the developer's servers by that feature.</p>
+      <p>Unlocking a password-protected PDF requires the correct password. The app is not intended to crack or bypass unknown passwords.</p>
+      <p><strong>Before publishing:</strong> ensure this description matches the actual implementation of every feature. If any feature uploads files or uses a cloud service, disclose that processing here.</p>
+    </section>
+
+    <section id="storage">
+      <h2 class="section-title">3. Local storage and cache</h2>
+      <p>The app may save files you create or choose to keep, including edited, resized, locked, or unlocked PDFs. Temporary files or cached data may also be created to support app functionality.</p>
+      <p>Files stored locally remain on your device until you or the app remove them, or until your device's operating system clears them. You can use the app's file controls or your device's storage settings where available to manage them.</p>
+    </section>
+
+    <section id="permissions">
+      <h2 class="section-title">4. Permissions</h2>
+      <p>PDF Experts may request access needed to select, open, save, or share documents. The exact permissions depend on your device, operating system, and app version.</p>
+      <p>Manage permissions through your device settings. Denying a permission may prevent the related feature from working.</p>
+    </section>
+
+    <section id="sharing">
+      <h2 class="section-title">5. Sharing and third-party services</h2>
+      <p>If you choose to share a PDF, your device may pass the selected file to the app or service you choose. That service's own privacy policy and practices apply after you share the file with it.</p>
+      <p>Any third-party libraries or services included in PDF Experts may process limited information as needed to provide their functions. The developer should list relevant providers here if the app uses analytics, crash reporting, advertising, cloud processing, or other network services.</p>
+    </section>
+
+    <section id="ads-analytics">
+      <h2 class="section-title">6. Ads, analytics and diagnostics</h2>
+      <p>This section must reflect the actual app build. If PDF Experts includes advertising, analytics, crash-reporting, or diagnostics SDKs, those tools may collect device identifiers, usage events, crash logs, or other data as described by their providers. Update this policy to name those providers and describe the data they collect.</p>
+      <p>If the app does not include any such SDKs, you may state that it does not use advertising or analytics services after verifying the dependencies and app behavior.</p>
+    </section>
+
+    <section id="security">
+      <h2 class="section-title">7. Security and retention</h2>
+      <p>We aim to use reasonable measures to protect information handled by the app. No method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+      <p>Files saved on your device are generally retained until deleted by you or removed through app or device storage management. Information you send to the developer for support may be retained as needed to respond and maintain support records, subject to applicable law.</p>
+    </section>
+
+    <section id="children">
+      <h2 class="section-title">8. Children's privacy</h2>
+      <p>PDF Experts does not intentionally request personal information from children through its core PDF tools. If you believe a child has sent personal information to the developer, contact us so we can review the request and take appropriate action.</p>
+    </section>
+
+    <section id="rights">
+      <h2 class="section-title">9. Your choices and rights</h2>
+      <p>You can choose which PDFs to open and share, manage app permissions, and delete files stored on your device. Depending on where you live, you may also have privacy rights concerning personal information held by the developer.</p>
+      <p>To make a privacy request, contact us using the details below. We may need enough information to understand and respond to your request.</p>
+    </section>
+
+    <section id="changes">
+      <h2 class="section-title">10. Policy changes</h2>
+      <p>We may update this Privacy Policy when the app, its features, or applicable requirements change. The updated date at the top of this page shows when the policy was most recently revised. Continued use of the app after an update is subject to the revised policy, to the extent permitted by law.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">11. Contact us</h2>
+      <div class="contact">
+        <p>For privacy questions or requests, contact the developer:</p>
+        <p><strong>App:</strong> PDF Experts</p>
+        <p><strong>Developer / Company:</strong> <span class="placeholder">[Add your developer or company name]</span></p>
+        <p><strong>Support email:</strong> <span class="placeholder">[Add your public support email]</span></p>
+        <p>Please replace the highlighted placeholders with valid contact details before publishing this page.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 PDF Experts. All rights reserved.
+  </footer>
+</body>
+</html>
+'''
+
+path = Path("/mnt/data/privacy-policy.html")
+path.write_text(html, encoding="utf-8")
+print(f"Created: {path}")
+print(f"Size: {path.stat().st_size:,} bytes")
+print("Includes responsive styling, red-and-white design, bold headings, table of contents, and privacy sections.")
